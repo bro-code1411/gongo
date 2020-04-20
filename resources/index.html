@@ -1,80 +1,39 @@
 <!DOCTYPE html>
 
 <html>
-<style>
-body {
-  font-family: Arial;
-}
-
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
+  <head>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
 <body>
-
-<h2>HTML Forms</h2>
-
-
-</style>
-<form action="/action_page.php">
+<form>
   <div class="split left">
-  <label for="test_name">Test name:</label><br>
-  <input type="text" id="test_name" name="test_name" value=""><br>
-  <label for="file_name">File name:</label><br>
-  <input type="text" id="file_name" name="file_name" value="">
-  <label for="method_name">Method name:</label>
-  <input type="text" id="method_name" name="method_name" value=""><br><br>
-  
-  <label for="input_parameter">Input Parameter:</label><br>
-  <label for="req1">req1:</label>
-  <input type="text" id="req1" name="req1" value=""><br>
-  <label for="req_type1">req_type1:</label>
-  <input type="text" id="req_type1" name="req_type1" value=""><br>
-  <label for="req_value1">req_value1:</label><br>
-  <textarea id="req_value1" name="req_value1" value="" rows="4" cols="50"></textarea><br>
-  <label for="checks">Checks:</label><br>
-  <label for="resp1">resp1:</label>
-  <input type="text" id="resp1" name="resp1" value=""><br>
-  <label for="resp_type1">resp_type1:</label>
-  <input type="text" id="resp_type1" name="resp_type1" value=""><br>
-  <label for="resp_value1">expected resp_value1:</label><br>
-  <textarea id="resp_value1" name="resp_value1" value="" rows="4" cols="50"></textarea><br>
+  <label class="label_field" for="test_name">Test name:</label><br>
+  <input class="input_field"type="text" id="test_name" name="test_name" value=""><br>
+  <label class="label_field" for="file_name">File name:</label><br>
+  <input class="input_field" type="text" id="file_name" name="file_name" value=""><br>
+  <label class="label_field" for="method_name">Method name:</label>
+  <input class="input_field" type="text" id="method_name" name="method_name" value=""><br><br>
+  <div class="label_field" id='RequestGroup'>
+    <label>Input Parameter:</label><br>
+  </div>
+  <input class="button_field" type='button' value='Add Input Parameter' id='addInputParameter'>
+  <div class="label_field" id='ResponseGroup'>
+    <label class="label_field">Checks:</label><br>
+  </div>
+  <input class="button_field" type='button' value='Add Checks' id='addChecks'>
   </div>
     <div class="split right">
-  <label for="db_name">DB name:</label><br>
-  <input type="text" id="db_name" name="db_name" value=""><br><br>
-
-  <label for="input_parameter">Data:</label><br>
-  <label for="table1">table1:</label>
-  <input type="text" id="table1" name="table1" value=""><br>
-  <label for="table_dto1">table_dto1:</label>
-  <input type="text" id="table_dto1" name="table_dto1" value=""><br>
-  <label for="table_data1">table_data1:</label><br>
-  <textarea id="table_data1" name="table_data1" value="" rows="4" cols="50"></textarea><br><br>
-  
-  <label for="table2">table2:</label>
-  <input type="text" id="table2" name="table2" value=""><br>
-  <label for="table_dto2">table_dto2:</label>
-  <input type="text" id="table_dto2" name="table_dto2" value=""><br>
-  <label for="table_data2">table_data2:</label><br>
-  <textarea id="table_data2" name="table_data2" value="" rows="4" cols="50"></textarea><br>
-  
-  <input type="submit" value="Submit">
+  <label class="label_field" for="db_name">DB name:</label><br>
+  <input class="input_field" type="text" id="db_name" name="db_name" value=""><br><br>
+  <div class="label_field" id='TableGroup'>
+    <label class="label_field" >Data:</label><br>
   </div>
+  <input class="button_field" type='button' value='Add Table Data' id='addData'><br>
+  <button class="button_field" type="button" id="submit"  >Submit</button>
+  </div>
+  <script src="./submitForm.js"></script>
 
 </body>
 </html>

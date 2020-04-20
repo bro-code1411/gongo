@@ -1,0 +1,32 @@
+body {
+  font-family: Arial;
+}
+
+.split {
+  height: 100%;
+  width: 46%;
+  position: fixed;
+  z-index: 1;
+  margin: 30px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.button_field {
+  margin: 6px;
+  width: 30%;
+}
+.input_field {
+  margin: 6px;
+  width: 98%;
+}
+.label_field {
+  margin: 6px;
+  width: 98%;
+}
