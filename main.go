@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gongo/server"
+	"bro-code/gongo/server"
 )
 
 func main() {
