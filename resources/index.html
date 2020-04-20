@@ -1,1 +1,84 @@
+<<<<<<< HEAD
 Hi!
+=======
+<!DOCTYPE html>
+
+<html>
+<style>
+body {
+  font-family: Arial;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+<body>
+
+<h2>HTML Forms</h2>
+
+
+</style>
+<form action="/action_page.php">
+  <div class="split left">
+  <label for="test_name">Test name:</label><br>
+  <input type="text" id="test_name" name="test_name" value=""><br>
+  <label for="file_name">File name:</label><br>
+  <input type="text" id="file_name" name="file_name" value="">
+  <label for="method_name">Method name:</label>
+  <input type="text" id="method_name" name="method_name" value=""><br><br>
+  
+  <label for="input_parameter">Input Parameter:</label><br>
+  <label for="req1">req1:</label>
+  <input type="text" id="req1" name="req1" value=""><br>
+  <label for="req_type1">req_type1:</label>
+  <input type="text" id="req_type1" name="req_type1" value=""><br>
+  <label for="req_value1">req_value1:</label><br>
+  <textarea id="req_value1" name="req_value1" value="" rows="4" cols="50"></textarea><br>
+  <label for="checks">Checks:</label><br>
+  <label for="resp1">resp1:</label>
+  <input type="text" id="resp1" name="resp1" value=""><br>
+  <label for="resp_type1">resp_type1:</label>
+  <input type="text" id="resp_type1" name="resp_type1" value=""><br>
+  <label for="resp_value1">expected resp_value1:</label><br>
+  <textarea id="resp_value1" name="resp_value1" value="" rows="4" cols="50"></textarea><br>
+  </div>
+    <div class="split right">
+  <label for="db_name">DB name:</label><br>
+  <input type="text" id="db_name" name="db_name" value=""><br><br>
+
+  <label for="input_parameter">Data:</label><br>
+  <label for="table1">table1:</label>
+  <input type="text" id="table1" name="table1" value=""><br>
+  <label for="table_dto1">table_dto1:</label>
+  <input type="text" id="table_dto1" name="table_dto1" value=""><br>
+  <label for="table_data1">table_data1:</label><br>
+  <textarea id="table_data1" name="table_data1" value="" rows="4" cols="50"></textarea><br><br>
+  
+  <label for="table2">table2:</label>
+  <input type="text" id="table2" name="table2" value=""><br>
+  <label for="table_dto2">table_dto2:</label>
+  <input type="text" id="table_dto2" name="table_dto2" value=""><br>
+  <label for="table_data2">table_data2:</label><br>
+  <textarea id="table_data2" name="table_data2" value="" rows="4" cols="50"></textarea><br>
+  
+  <input type="submit" value="Submit">
+  </div>
+
+</body>
+</html>
+>>>>>>> 3c664cd92de9511fb748b59b5ba0072c94761e8d
