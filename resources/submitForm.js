@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //const url = "";
   $("#submit").click(function () {
-    let parameters = {
+    let data = {
       testName: $("#test_name").val(),
       fileName: $("#file_name").val(),
       methodName: $("#method_name").val(),
@@ -18,7 +18,7 @@ $(document).ready(function () {
     };
     console.log(data);
 
-    // $.get(url, parameters, (response, error) => {
+    // $.get(url, data, (response, error) => {
     //   if (response) {
     //     console.log(response);
     //   } else console.log(error);
@@ -36,24 +36,24 @@ $(document).ready(function () {
     requestDiv
       .after()
       .html(
-        "<label> Request " +
+        "<label class='label_field'> Request " +
           requestCounter +
           " name </label>" +
-          '<input type="text" name="req_name' +
+          '<input class="input_field" type="text" name="req_name' +
           requestCounter +
           '" id="req_name' +
           requestCounter +
-          '" value="" ><label> Request ' +
+          '" value="" ><label class="label_field"> Request ' +
           requestCounter +
           " type </label>" +
-          '<input type="text" name="req_type' +
+          '<input type="text" class="input_field" name="req_type' +
           requestCounter +
           '" id="req_type' +
           requestCounter +
-          '" value="" ><label> Request ' +
+          '" value="" ><label class="label_field"> Request ' +
           requestCounter +
           " value </label>" +
-          '<textarea name="req_value' +
+          '<textarea class="input_field" name="req_value' +
           requestCounter +
           '" id="req_value' +
           requestCounter +
@@ -74,24 +74,24 @@ $(document).ready(function () {
     responseDiv
       .after()
       .html(
-        "<label> Response " +
+        "<label class='label_field'> Response " +
           responseCounter +
           " name </label>" +
-          '<input type="text" name="res_name' +
+          '<input class="input_field" type="text" name="res_name' +
           responseCounter +
           '" id="res_name' +
           responseCounter +
-          '" value="" ><label> Response ' +
+          '" value="" ><label class="label_field"> Response ' +
           responseCounter +
           " type </label>" +
-          '<input type="text" name="res_type' +
+          '<input class="input_field" type="text" name="res_type' +
           responseCounter +
           '" id="res_type' +
           responseCounter +
-          '" value="" ><label> Response ' +
+          '" value="" ><label class="label_field"> Response ' +
           responseCounter +
           " value </label>" +
-          '<textarea name="res_value' +
+          '<textarea class="input_field" name="res_value' +
           responseCounter +
           '" id="res_value' +
           responseCounter +
@@ -112,24 +112,24 @@ $(document).ready(function () {
     tableDiv
       .after()
       .html(
-        "<label> Table " +
+        "<label class='label_field'> Table " +
           tableCounter +
           " name </label>" +
-          '<input type="text" name="table_name' +
+          '<input class="input_field" type="text" name="table_name' +
           tableCounter +
           '" id="table_name' +
           tableCounter +
-          '" value="" ><label> Table ' +
+          '" value="" ><label class="label_field"> Table ' +
           tableCounter +
           " Dto </label>" +
-          '<input type="text" name="table_dto' +
+          '<input class="input_field" type="text" name="table_dto' +
           tableCounter +
           '" id="table_dto' +
           tableCounter +
-          '" value="" ><label> Table ' +
+          '" value="" ><label class="label_field"> Table ' +
           tableCounter +
           " data </label>" +
-          '<textarea name="table_data' +
+          '<textarea class="input_field"name="table_data' +
           tableCounter +
           '" id="table_data' +
           tableCounter +
