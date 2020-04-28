@@ -1,27 +1,50 @@
+var requestNames = new Array();
+var requestTypes = new Array();
+var requestValues = new Array();
+var responseNames = new Array();
+var responseTypes = new Array();
+var responseValues = new Array();
+var tableNames = new Array();
+var tableDtos = new Array();
+var tableDatas = new Array();
+
 $(document).ready(function () {
-  //const url = "";
+  //const apiUrl = "";
   $("#submit").click(function () {
     let data = {
       testName: $("#test_name").val(),
       fileName: $("#file_name").val(),
       methodName: $("#method_name").val(),
-      // requestName1: $("#req_name1").val(),
-      // requestType1: $("#req_type1").val(),
-      // requestValue1: $("#req_value1").val(),
-      // responseName1: $("#resp_name1").val(),
-      // responseType1: $("#resp_type1").val(),
-      // responseValue1: $("#resp_value1").val(),
       dbName: $("#db_name").val(),
-      //tableName1: $("#table_name1").val(),
-      //tableDto1: $("#table_dto1").val(),
-      //tableData1: $("#table_data1").val(),
     };
+
+    var requestCount = requestIterator();
+    var responseCount = responseIterator();
+    var tableCount = tableIterator();
+
+    for (var i = 0; i < requestCount; i++) {
+      data["requestName" + (i + 1)] = requestNames[i];
+      data["requestType" + (i + 1)] = requestTypes[i];
+      data["requestValue" + (i + 1)] = requestValues[i];
+    }
+    for (var i = 0; i < responseCount; i++) {
+      data["responseName" + (i + 1)] = responseNames[i];
+      data["responseType" + (i + 1)] = responseTypes[i];
+      data["responseValue" + (i + 1)] = responseValues[i];
+    }
+    for (var i = 0; i < tableCount; i++) {
+      data["tableName" + (i + 1)] = tableNames[i];
+      data["tableDto" + (i + 1)] = tableDtos[i];
+      data["tableData" + (i + 1)] = tableDatas[i];
+    }
     console.log(data);
 
-    // $.get(url, data, (response, error) => {
+    // $.get(apiUrl, data, (response, error) => {
     //   if (response) {
     //     console.log(response);
-    //   } else console.log(error);
+    //   } else {
+    //     console.log(error);
+    //   }
     // });
   });
 });
@@ -139,3 +162,36 @@ $(document).ready(function () {
     tableCounter++;
   });
 });
+
+function requestIterator() {
+  var count = 1;
+  while ($("#req_name" + count)[0] !== undefined) {
+    requestNames.push($("#req_name" + count).val());
+    requestTypes.push($("#req_type" + count).val());
+    requestValues.push($("textarea#req_value" + count).val());
+    count++;
+  }
+  return count - 1;
+}
+
+function responseIterator() {
+  var count = 1;
+  while ($("#res_name" + count)[0] !== undefined) {
+    responseNames.push($("#res_name" + count).val());
+    responseTypes.push($("#res_type" + count).val());
+    responseValues.push($("textarea#res_value" + count).val());
+    count++;
+  }
+  return count - 1;
+}
+
+function tableIterator() {
+  var count = 1;
+  while ($("#table_name" + count)[0] !== undefined) {
+    tableNames.push($("#table_name" + count).val());
+    tableDtos.push($("#table_dto" + count).val());
+    tableDatas.push($("textarea#table_data" + count).val());
+    count++;
+  }
+  return count - 1;
+}
